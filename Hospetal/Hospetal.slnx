@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="Appleacation/Appleacation.csproj" Id="d2afd318-d588-4a20-b49c-c84774e53bd8" />
+  <Project Path="Domain/Domain.csproj" Id="eac435e9-f164-4f40-ba60-ebe59d58a71b" />
+  <Project Path="Hospetal/HospetalAPI.csproj" />
+  <Project Path="Infrustracher/Infrustracher.csproj" Id="184dacb2-aa3d-4399-a8da-afe2b0638b90" />
+</Solution>
