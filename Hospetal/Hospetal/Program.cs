@@ -1,3 +1,6 @@
+using Appleacation.readOnlyRepo;
+using Appleacation.repo;
+using Appleacation.unitOfWork;
 using Infrustracher;
 using Microsoft.EntityFrameworkCore;
 
@@ -11,6 +14,14 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<HospitalContext>(options =>
     options.UseSqlServer(
         builder.Configuration.GetConnectionString("DefaultConnection")));
+
+
+// Add repositories and unit of work
+builder.Services.AddScoped(typeof(IReposotory<>), typeof(Reposetory<>));
+builder.Services.AddScoped(typeof(IReadOnlyReposotory<>), typeof(ReadOnlyReposetory<>));
+builder.Services.AddScoped (typeof(IUnitOfWork<>), typeof(UnitOfWork<>));
+
+
 
 var app = builder.Build();
 
