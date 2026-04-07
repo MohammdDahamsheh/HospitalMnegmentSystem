@@ -1,5 +1,7 @@
 using Appleacation.readOnlyRepo;
 using Appleacation.repo;
+using Appleacation.service.comannd.Patient;
+using Appleacation.service.query.Patient;
 using Appleacation.unitOfWork;
 using Infrustracher;
 using Microsoft.EntityFrameworkCore;
@@ -21,6 +23,9 @@ builder.Services.AddScoped(typeof(IReposotory<>), typeof(Reposetory<>));
 builder.Services.AddScoped(typeof(IReadOnlyReposotory<>), typeof(ReadOnlyReposetory<>));
 builder.Services.AddScoped (typeof(IUnitOfWork<>), typeof(UnitOfWork<>));
 
+// Add services 
+builder.Services.AddScoped<PatientQueryService>();
+builder.Services.AddScoped<PatientCommandService>();
 
 
 var app = builder.Build();
