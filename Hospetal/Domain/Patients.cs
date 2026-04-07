@@ -11,17 +11,17 @@ namespace Domain
     {
         public Patients() { }
         [Key]
-        public int patientId { private set; get; }
-        public string patientCode { get; private set; }
-        public string name { get; private set; }
-        public string phone { get; private set; }
-        public string addres { get; private set; }
-        public string gender {get; private set;}
-        public DateOnly dateOfBirth { get; private set; }
-        public string bloodType { get; private set; }
-        public string allergies { get; private set; }
-        public string emergencyContact { get; private set; }
-        public DateTime createdAt { get; private set; }
+        public int patientId {   set; get; }
+        public string patientCode { get; set; }
+        public string name { get; set; }
+        public string phone { get; set; }
+        public string addres { get; set; }
+        public string gender {get;  set;}
+        public DateOnly dateOfBirth { get; set; }
+        public string bloodType { get; set; }
+        public string allergies { get; set; }
+        public string emergencyContact { get; set; }
+        public DateTime createdAt { get; set; }
         
         public IEnumerable<Bills> bills { get; private set; }
         public IEnumerable <Admissions> admissions { get; private set; }

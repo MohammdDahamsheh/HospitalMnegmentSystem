@@ -19,14 +19,9 @@ namespace Appleacation.readOnlyRepo
             this.dbSet = context.Set<T>();
         }
 
-        public async Task<IEnumerable<T>> GetAllAsync()
+        public IQueryable<T> GetAll()
         {
-           var result = await dbSet.ToListAsync();
-            if (result == null)
-            {
-                throw new Exception("No data found");
-            }
-            return result;
+            return dbSet;
         }
 
         public async Task<T> GetByIdAsync(int id)
